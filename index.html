@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woofy.css">
+
+
+
+
+    <title>WOOFY TAILS</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            /* Adjust the highlight style as needed */
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar background ">
+        <div>
+            <ul class="nav-list ">
+                <div class="logo"><img src="WhatsApp Image 2023-11-14 at 14.26.59_5a7be85d.jpg" alt="logo"></div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#Adopt a Pet">Adopt a Pet</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+
+        </div>
+        <div class="rightNav ">
+            <input type="text" name="search" id="search" placeholder="search text">
+            <button class="btn btn-sm" onclick="searchText();">search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <div class="searchable">
+        <section class="background firstSection">
+            <div class="boxmain">
+                <div class="firstHalf">
+                    <p class="text-big">Pet's Paradise in your absence</p>
+                    <p class="text-small">Woofy Tails is a single platform to meet all your pet's needs.</p>
+                    <div class="buttons">
+                        <button class="btn" onclick="showSection('About')" id="aboutButton">About Us</button>
+
+                    </div>
+                </div>
+                <div class="secondHalf">
+                    <img src="WhatsApp Image 2023-11-10 at 18.01.51_276ce28f.jpg" alt="Image">
+                </div>
+            </div>
+        </section>
+
+        <section class="section searchable" id="About">
+            <div class="paras">
+                <p class="sectionTag text-big">About Us</p>
+                <p class="sectionsubTag text-small">‘Woofy Tails’ is a single platform which
+                    provides all types of pet services for pet parents
+                    including boarding, house sitting, day care,
+                    walking, grooming, accessories, food, travel,
+                    show & events, breeding, medical care services,
+                    training and adopting a pet.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="download.jpeg" alt="Image" class="imgfluid">
+            </div>
+        </section>
+
+        <section class="section section-left searchable">
+            <div class="paras">
+                <p class="sectionTag text-big">Vision</p>
+                <p class="sectionsubTag text-small">‘Woofy Tails’ is an initiative that focuses on
+                    revolutionizing the pet care industry by providing
+                    all necessary pet essential services on one
+                    platform. We want to bring a change in the current
+                    pet care industry by fixing some of the key
+                    inefficiencies faced by pet owner.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="20 Proud Dog Moms Showing Off Their New Puppies.jpeg" alt="Image" class="imgfluid">
+            </div>
+        </section>
+
+        <section class="section searchable" id="services">
+            <div class="paras">
+                <p class="sectionTag text-big">Mission</p>
+                <p class="sectionsubTag text-small">‘Woofy Tails’ wants to reduce the need for
+                    searching different websites and apps for diverse
+                    needs of our kiddo and want to connect different
+                    stakeholders of pet industry like veterinarians,
+                    breeders, pet food suppliers, pet groomers, pet
+                    trainers, pet sitters etc. at one marketplace
+                    becoming the one stop solution for every pet
+                    parent.</p>
+            </div>
+            <div class="thumbnail">
+                <img src="first car ride for this golden retriever.jpeg" alt="Image" class="imgfluid">
+            </div>
+        </section>
+
+        <section class="contact searchable" id="contact">
+            <h1 class="text-center">Contact Us</h1>
+            <div class="form">
+                <input class="form-input" type="text" name="name" id="name" placeholder="Enter Your Name">
+                <input class="form-input" type="phone" name="name" id="name" placeholder="Enter Your Phone">
+                <input class="form-input" type="e-mail" name="name" id="name" placeholder="Enter Your E-mail">
+                <textarea class="form-input" name="text" id="text" cols="30" rows="10"
+                    placeholder="Ellaborate your concern"></textarea>
+                <button class="btn btn-sm btn-dark" onclick="submessage();">Submit</button>
+            </div>
+
+        </section>
+        <section class="adopt searchable" id="Adopt a Pet">
+            <h1 class="adopt-text">Adopt a Pet</h1>
+            <button style="text-align: center; position :absolute;
+            right:700px;" class="btn btn-sm  adoptb" onclick="displayContact()">Adopt a Pet</button>
+
+            <p id="Adopt a Pet" style="display: none;">Adopt a Pet<a href="#" id="phoneNumber"></a></p>
+
+            <div id="adoptapet" style="display: none;">
+                <h2 style="text-align: center; margin-top: 50px;">+91-7528940810</h2>
+            </div>
+        </section>
+    </div>
+
+    <footer class="background">
+        <p class="text-footer">
+            Copyright &copy; 2027 - www.woofytails.com - All rights reserved
+        </p>
+    </footer>
+
+
+
+    <script src="woofy.js"></script>
+    <script>
+        function showSection(sectionId) {
+            // Hide any existing section if needed
+
+            // Scroll to the specified section
+            var section = document.getElementById(sectionId + 'Section');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' }); // This will smoothly scroll to the section
+            }
+        }
+        function submessage() {
+            alert("Your Data Has been Submitted Successfully");
+        }
+
+        function displayContact()
+        {
+            
+            document.getElementById("adoptapet").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
